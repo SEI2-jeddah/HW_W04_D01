@@ -15,7 +15,7 @@ var swapCase = (string) => {
       msg[index] = x.toUpperCase();
     }
   });
-  console.log(msg);
+  console.log(msg.join(" "));
 };
 swapCase(msg);
 
@@ -93,7 +93,7 @@ inputarr.forEach(element => {
          newArr.push(element)
     }
 });
- return console.log(newArr.reverse());
+ return console.log((newArr.reverse()).join(" "));
  
 }
 var input = "how are you my self"
