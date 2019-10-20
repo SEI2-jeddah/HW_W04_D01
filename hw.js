@@ -1,25 +1,30 @@
-​// ------ FOR ALL THE EXCERCISES ONLY USE ARROW FUNCTIONS  ----- //
+​/* FOR ALL THE EXCERCISES ONLY USE ARROW FUNCTIONS   
 ​
 
+ PART 1:  USE MAP IN THE FOLLOWING EXCERCISES 
 
-// PART 1:  USE MAP IN THE FOLLOWING EXCERCISES //
+ A) write a function called swapCase that takes a string of words and uses .map and your newly written capitalize()
+ function to return a string where every other word is in all caps.
+ Hint: look up Array.prototype.map on MDN and see what arguments the .map callback can take.
+ ex: swapCase('hello stranger , what do we have today? ') // => " HELLO stranger , WHAT do WE have TODAY ?" */
 
-// A) write a function called swapCase that takes a string of words and uses .map and your newly written capitalize()
-// function to return a string where every other word is in all caps.
-// Hint: look up Array.prototype.map on MDN and see what arguments the .map callback can take.
-// ex: swapCase('hello stranger , what do we have today? ') // => " HELLO stranger , WHAT do WE have TODAY ?"
+
+//map
 var swapCase = function(string) {
-  // Codeeeee
-};
+  return (string.split(" ").map(letter => letter.toUpperCase())).join(" ")
+}
+console.log(swapCase('hello stranger , what do we have today? '));
+
+//i think this is easier than map
+var swapCase1 = (string => string.toUpperCase())
+console.log(swapCase1('hello stranger , what do we have today? '));
 ​
 // B) Write a function shiftLetters that takes a string and uses .map to return an encoded string with each letter shifted down the
 // alphabet by one. Hint: Use Look up the JS functions String.fromCharCode() and String.charCodeAt() .
 // see if you can use Ascii code to acomplish this
 // ex. shiftLetters('hello') // => 'ifmmp'
 // ex. (shiftLetters('abcxyz') // => "bcdyz{"
-var shiftLetters = function(string) {
-  // code!
-};
+
 
 
 
