@@ -20,9 +20,9 @@ console.log(swapCase('hello stranger , what do we have today? '))
 // ex. shiftLetters('hello') // => 'ifmmp'
 // ex. (shiftLetters('abcxyz') // => "bcdyz{"
 var shiftLetters = function(string) {
-  return string.split("").map(char => String.fromCharCode(char.charCodeAt(0)+1)).join("")
+ string.split("").map(char => String.fromCharCode(char.charCodeAt(0)+1)).join("")
 	
-console.log(shiftLetters("hello"));
+console.log(shiftLetters("hello"))
 };
 
 
