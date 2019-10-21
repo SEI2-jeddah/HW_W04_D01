@@ -9,7 +9,16 @@
 // Hint: look up Array.prototype.map on MDN and see what arguments the .map callback can take.
 // ex: swapCase('hello stranger , what do we have today? ') // => " HELLO stranger , WHAT do WE have TODAY ?"
 var swapCase = function(string) {
-  // Codeeeee
+  
+array = 'hello stranger , what do we have today? ';
+var string = []
+var swapCase = function(string) {
+  var upperCasedArray = $.map(array, 
+  String.toUpperCase);
+
+    return array.toUpperCase; 
+};
+
 };
 ​
 // B) Write a function shiftLetters that takes a string and uses .map to return an encoded string with each letter shifted down the
