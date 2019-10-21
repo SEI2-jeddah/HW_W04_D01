@@ -9,18 +9,21 @@
 // Hint: look up Array.prototype.map on MDN and see what arguments the .map callback can take.
 // ex: swapCase('hello stranger , what do we have today? ') // => " HELLO stranger , WHAT do WE have TODAY ?"
 var swapCase = function(string) {
-  // Codeeeee
-};
-​
+  return string.split('').map(value => value.toUpperCase()).join('');
+  };
+​swapCase('hello stranger , what do we have today?');
+
 // B) Write a function shiftLetters that takes a string and uses .map to return an encoded string with each letter shifted down the
 // alphabet by one. Hint: Use Look up the JS functions String.fromCharCode() and String.charCodeAt() .
 // see if you can use Ascii code to acomplish this
 // ex. shiftLetters('hello') // => 'ifmmp'
 // ex. (shiftLetters('abcxyz') // => "bcdyz{"
 var shiftLetters = function(string) {
-  // code!
-};
+  return string.split('').map((value) => String.fromCharCode(value.charCodeAt()+1)).join('');
+  };
 
+shiftLetters('hello');
+shiftLetters('abcxyz');
 
 
 
@@ -46,6 +49,17 @@ var shiftLetters = function(string) {
 // - ace of diamonds
 // - 2 of diamonds
 // - 3 of diamonds 
+var deck = [];
+var suits = ["diamonds", "spades", "hearts", "clubs"];
+var values = ["A", "2", "3", "4", "5", "6", "7", "8", "9", "10", "J", "Q", "K"];
+
+suits.forEach(suit => {
+    values.forEach(value => {
+    deck.push(value + " of " +suit );
+  });
+});
+
+console.log(deck)
 
 
 // B) Word Play
@@ -53,7 +67,18 @@ var shiftLetters = function(string) {
 // Turn that sentence into an array using the split method.
 // Then, loop through this array to build a new array out of every word in the sentence that is 3 or more characters in length.
 // Finally, reverse the order of the new array, join it back together into a string, and display it to the user.
+var finalArray =[] ;
+var wordPlay = (sentence) =>{
+var arr = sentence.split(" ")
+arr.forEach(element => {
+    if(element.length >=3){
+         finalArray.push(element)
+    }
+});
+ return console.log(finalArray.reverse());
 
+}
+wordPlay("Hi Good Morning ")
 
 
 
