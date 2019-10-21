@@ -64,6 +64,17 @@ console.log(shiftLetters('abcxyz'));
 // - 2 of diamonds
 // - 3 of diamonds 
 
+var deck = []
+var suits = ["diamonds", "spades", "hearts", "clubs"];
+var ranks = ["A", "2", "3", "4", "5", "6", "7", "8", "9", "10", "J", "Q", "K"];
+
+suits.forEach(suit => {
+    ranks.forEach(ranks => {
+    deck.push(ranks+ " of "+suit);
+  })
+})
+
+console.log(deck)
 
 
 // B) Word Play
@@ -71,6 +82,23 @@ console.log(shiftLetters('abcxyz'));
 // Turn that sentence into an array using the split method.
 // Then, loop through this array to build a new array out of every word in the sentence that is 3 or more characters in length.
 // Finally, reverse the order of the new array, join it back together into a string, and display it to the user.
+var ans = [] 
+var wordPlay = (sentence) =>{
+var arr = sentence.split(" ")
+
+var arryR = 
+arr.forEach(element => {
+  if(element.length >= 3){
+         ans.push(element)
+      }
+
+});
+
+ return console.log(ans.reverse());
+}
+
+wordPlay("This sentence is reveresed")
+
 
 
 
