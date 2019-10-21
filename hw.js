@@ -9,8 +9,9 @@
 // Hint: look up Array.prototype.map on MDN and see what arguments the .map callback can take.
 // ex: swapCase('hello stranger , what do we have today? ') // => " HELLO stranger , WHAT do WE have TODAY ?"
 var swapCase = function(string) {
-  // Codeeeee
+  return array.from(string).map(string=>string.toUpperCase()).join(' ')
 };
+console.log((swapCase('hello'))+ " stranger " + (swapCase('what'))+ " do "+ (swapCase('we')) + " have "+(swapCase('today'))+" ? ")
 ​
 // B) Write a function shiftLetters that takes a string and uses .map to return an encoded string with each letter shifted down the
 // alphabet by one. Hint: Use Look up the JS functions String.fromCharCode() and String.charCodeAt() .
@@ -18,8 +19,12 @@ var swapCase = function(string) {
 // ex. shiftLetters('hello') // => 'ifmmp'
 // ex. (shiftLetters('abcxyz') // => "bcdyz{"
 var shiftLetters = function(string) {
-  // code!
-};
+  return array.from(string).map((word, index)=>{
+    return String.fromCharCode(string.charCodeAt(index)+1)
+  }).join(' ')
+}
+
+console.log(shiftLetters('hello'))
 
 
 
@@ -47,6 +52,16 @@ var shiftLetters = function(string) {
 // - 2 of diamonds
 // - 3 of diamonds 
 
+var suits =["spades", "hearts", "diamonds", "clubs"];
+var cards =["ace", "jack", "queen", "king", 1, 2, 3, 4, 5, 6, 7, 8, 9, 10];
+var deck = [];
+
+suits.forEach(function(index1){
+    cards.forEach(function(index2){
+      deck.push(index2+ " "+index1);
+    });
+  });
+  console.log(deck)
 
 // B) Word Play
 // Create a form where users may enter a sentence.
@@ -54,6 +69,15 @@ var shiftLetters = function(string) {
 // Then, loop through this array to build a new array out of every word in the sentence that is 3 or more characters in length.
 // Finally, reverse the order of the new array, join it back together into a string, and display it to the user.
 
-
-
-
+var splitArray = []
+var userSentence = function(sentence){
+  console.log(sentence.split(''))
+  for (var index=0; index<sentence.length; index++){
+    if (sentence[index]>=3){
+    splitArray.push(sentence[index])
+  }
+  return splitArray
+  }
+  
+}
+console.log(userSentence("we are in class"))
