@@ -8,18 +8,35 @@
 // function to return a string where every other word is in all caps.
 // Hint: look up Array.prototype.map on MDN and see what arguments the .map callback can take.
 // ex: swapCase('hello stranger , what do we have today? ') // => " HELLO stranger , WHAT do WE have TODAY ?"
-var swapCase = function(string) {
-  // Codeeeee
-};
+var swapCase = function(string){
+  let divSentence = string.split(" ") 
+  let newSentence = divSentence.map(function(word,index){
+    if ( index % 2 === 0) { 
+
+      return word.toUpperCase()
+
+     } else {
+       return word 
+     }
+  })
+  return newSentence.join(" ")
+}
+swapCase('hello stranger ,  what do we have today ?') 
 ​
 // B) Write a function shiftLetters that takes a string and uses .map to return an encoded string with each letter shifted down the
-// alphabet by one. Hint: Use Look up the JS functions String.fromCharCode() and String.charCodeAt() .
+// alphabet by one. Hint: Use Look up the JS functions String.fromCharCode()//to convert ASCII to English charact and String.charCodeAt() //convert the English character to ASCII .
 // see if you can use Ascii code to acomplish this
 // ex. shiftLetters('hello') // => 'ifmmp'
 // ex. (shiftLetters('abcxyz') // => "bcdyz{"
-var shiftLetters = function(string) {
-  // code!
-};
+var shiftLetters = function(string){
+  let code = string.split('')
+    
+   let uncode = code.map((letter) => String.fromCharCode(letter.charCodeAt(0)+1)).join('');
+    
+   return uncode
+  }
+  
+  shiftLetters('hello');
 
 
 
@@ -55,5 +72,18 @@ var shiftLetters = function(string) {
 // Finally, reverse the order of the new array, join it back together into a string, and display it to the user.
 
 
+//form or promt 
+// take and put in split(" ")
+let  WordPlay = (Sentence) => {
+  let arr =[];
+  let arraySentence = Sentence.split("");
+  arraySentence.forEach(element => {
+    if (element.length > 3) {
+      arr.push(element)
+    }
+     return arr.reverse();
+  });
+   return WordPlay
+  } WordPlay();
 
 
