@@ -65,6 +65,15 @@ var shiftLetters = function(string){
 // - 3 of diamonds 
 
 
+var ranks = ['ace',2,3,4,5,6,7,8,9,10,'jack','queen','king']
+var suits = ['spades','diamonds','clubs','hearts']
+suits.forEach((suit) => {
+ ranks.forEach((rank) => {
+     console.log(rank+ 'of' +suit)
+ })
+})
+
+
 // B) Word Play
 // Create a form where users may enter a sentence.
 // Turn that sentence into an array using the split method.
