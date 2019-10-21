@@ -8,6 +8,7 @@
 // function to return a string where every other word is in all caps.
 // Hint: look up Array.prototype.map on MDN and see what arguments the .map callback can take.
 // ex: swapCase('hello stranger , what do we have today? ') // => " HELLO stranger , WHAT do WE have TODAY ?"
+
 var swapCase = function(string) {
   // Codeeeee
 };
