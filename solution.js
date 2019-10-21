@@ -58,10 +58,8 @@ const readline = require('readline').createInterface({
     sentence=sentence.split(" ");
     var newArray=[];
     var finalArray=[];
-    sentence.forEach((word)=>{
-        if(word.length>=3){
-            newArray.push(word);
-        }
+    newArray=sentence.filter((word)=>{
+        return word.length>=3
     });
     newArray.forEach((word,index)=>{
         finalArray[newArray.length-1-index]=word;
