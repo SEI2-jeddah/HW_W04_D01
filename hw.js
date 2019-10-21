@@ -1,4 +1,4 @@
-​// ------ FOR ALL THE EXCERCISES ONLY USE ARROW FUNCTIONS  ----- //
+
 ​
 
 
@@ -8,9 +8,13 @@
 // function to return a string where every other word is in all caps.
 // Hint: look up Array.prototype.map on MDN and see what arguments the .map callback can take.
 // ex: swapCase('hello stranger , what do we have today? ') // => " HELLO stranger , WHAT do WE have TODAY ?"
-var swapCase = function(string) {
-  // Codeeeee
-};
+
+const swapCase = {(str)=> str.split(' ').map(v=>v.toUpperCase())
+if(str.length)}
+
+
+console.log(swapCase('hello world'))
+
 ​
 // B) Write a function shiftLetters that takes a string and uses .map to return an encoded string with each letter shifted down the
 // alphabet by one. Hint: Use Look up the JS functions String.fromCharCode() and String.charCodeAt() .
@@ -54,6 +58,14 @@ var shiftLetters = function(string) {
 // Then, loop through this array to build a new array out of every word in the sentence that is 3 or more characters in length.
 // Finally, reverse the order of the new array, join it back together into a string, and display it to the user.
 
-
-
-
+var a = [];
+const so = (str)=> {
+var arr = str.split(' ')
+  arr.forEach(element => {
+    if(element.length >=3){
+         a.push(element)
+    }
+});
+ return console.log(a.reverse());
+}
+so("how are you")
