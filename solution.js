@@ -31,15 +31,16 @@ console.log(shiftLetters('hello'));
 console.log(shiftLetters('abcxyz'));
 
 //part 2-A
-
+var deck=[];
 var ranks=["ace","1","2","3","4","5","6","7","8","9","10","jack","queen","king"];
 var suits=["clubs","diamonds","hearts","spades"];
 
 suits.forEach((suit)=>{
     ranks.forEach((rank)=>{
-        console.log(rank+" of "+suit);
-    })
-})
+        deck.push(rank+" of "+suit);
+    });
+});
+console.log(deck);
 
 //part 2-B
 const readline = require('readline').createInterface({
