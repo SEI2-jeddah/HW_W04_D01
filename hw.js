@@ -8,8 +8,11 @@
 // function to return a string where every other word is in all caps.
 // Hint: look up Array.prototype.map on MDN and see what arguments the .map callback can take.
 // ex: swapCase('hello stranger , what do we have today? ') // => " HELLO stranger , WHAT do WE have TODAY ?"
-var swapCase = function(string) {
-  // Codeeeee
+var swapCase =(string)=> {
+  str=string.split(" ");
+  let st= str.map(x=>(x%2==0).toUpperCase());
+  return st;
+ 
 };
 ​
 // B) Write a function shiftLetters that takes a string and uses .map to return an encoded string with each letter shifted down the
@@ -18,7 +21,9 @@ var swapCase = function(string) {
 // ex. shiftLetters('hello') // => 'ifmmp'
 // ex. (shiftLetters('abcxyz') // => "bcdyz{"
 var shiftLetters = function(string) {
-  // code!
+  spli=string.split('');
+  return spli.map((x)=>String.fromCharCode(x.CharCodeAt() +1)).join('');
+
 };
 
 
@@ -45,7 +50,23 @@ var shiftLetters = function(string) {
 // - king of clubs 
 // - ace of diamonds
 // - 2 of diamonds
-// - 3 of diamonds 
+// - 3 of diamonds
+$(document).ready(function(){
+  var cards = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10, "Jack", "Queen", "King", "Ace"];
+  var suits = ["Diamonds", "Hearts", "Clubs", "Spades"];
+  var deck = [];
+​
+  suits.forEach(function(suit){
+    cards.forEach(function(card){
+      deck.push(card + " of " + suit);
+    });
+  });
+  deck.forEach(function(rank){
+    $(".cards").append("<li>" + rank);
+  });
+  alert("Take the cards");
+});
+
 
 
 // B) Word Play
@@ -54,6 +75,19 @@ var shiftLetters = function(string) {
 // Then, loop through this array to build a new array out of every word in the sentence that is 3 or more characters in length.
 // Finally, reverse the order of the new array, join it back together into a string, and display it to the user.
 
-
-
+$(document).ready(function() {
+  $('#form').submit(function(event){
+    var wordInSentence = $('#wordInSentence').val();
+    let array = wordInSentence.split(' ');
+​
+    let array_new = array.map(function(word){
+      if(word.length > 3){return word;};
+​
+    });
+    var resultArray = array_new.reverse();
+    const resultText = resultArray.join(' ');
+​
+    alert(resultText);
+  });
+});
 
