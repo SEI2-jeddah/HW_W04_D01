@@ -1,26 +1,42 @@
-​// ------ FOR ALL THE EXCERCISES ONLY USE ARROW FUNCTIONS  ----- //
-​
+// // ​// ------ FOR ALL THE EXCERCISES ONLY USE ARROW FUNCTIONS  ----- //
+// // ​
 
 
-// PART 1:  USE MAP IN THE FOLLOWING EXCERCISES //
+// // // PART 1:  USE MAP IN THE FOLLOWING EXCERCISES //
 
-// A) write a function called swapCase that takes a string of words and uses .map and your newly written capitalize()
-// function to return a string where every other word is in all caps.
-// Hint: look up Array.prototype.map on MDN and see what arguments the .map callback can take.
-// ex: swapCase('hello stranger , what do we have today? ') // => " HELLO stranger , WHAT do WE have TODAY ?"
-var swapCase = function(string) {
-  // Codeeeee
+// // // A) write a function called swapCase that takes a string of words and uses .map and your newly written capitalize()
+// // // function to return a string where every other word is in all caps.
+// // // Hint: look up Array.prototype.map on MDN and see what arguments the .map callback can take.
+// // // ex: swapCase('hello stranger , what do we have today? ') // => " HELLO stranger , WHAT do WE have TODAY ?"
+// // var swapCase = function(string) {
+// //   // Codeeeee
+// // };
+
+var swapCase = (sentence) => {
+  stringSplitted = sentence.split(" ");
+
+  var stringy = stringSplitted.map(x => (x % 2== 0).toUpperCase());
+
+  return stringy
 };
-​
-// B) Write a function shiftLetters that takes a string and uses .map to return an encoded string with each letter shifted down the
-// alphabet by one. Hint: Use Look up the JS functions String.fromCharCode() and String.charCodeAt() .
-// see if you can use Ascii code to acomplish this
-// ex. shiftLetters('hello') // => 'ifmmp'
-// ex. (shiftLetters('abcxyz') // => "bcdyz{"
-var shiftLetters = function(string) {
-  // code!
+
+console.log(swapCase("Hello everyone, my name is"));
+
+
+// ​
+// // B) Write a function shiftLetters that takes a string and uses .map to return an encoded string with each letter shifted down the
+// // alphabet by one. Hint: Use Look up the JS functions String.fromCharCode() and String.charCodeAt() .
+// // see if you can use Ascii code to acomplish this
+// // ex. shiftLetters('hello') // => 'ifmmp'
+// // // ex. (shiftLetters('abcxyz') // => "bcdyz{"
+
+var shiftLetters = (string) =>{
+  splitted = string.split('');
+
+  return splitted.map((x)=>String.fromCharCode(x.charCodeAt() + 1)).join('');
 };
 
+console.log(shiftLetters('hello'));
 
 
 
@@ -46,7 +62,22 @@ var shiftLetters = function(string) {
 // - ace of diamonds
 // - 2 of diamonds
 // - 3 of diamonds 
+ suits = [ "Clubs", "Diamonds", "Spades", "Hearts"];
+ cards = ["1", "2", "3", "4", "5", "6", "7", "8", "9", "10", "Jack", "Queen", "King", "Ace"];
+ deck = [];
 
+
+ suits.forEach(function(suit){
+  cards.forEach(function(card){
+    deck.push(card + " of " + suit);
+  });
+ });
+
+ deck.forEach(function(rank){
+  $(".cards").appned("<li>" + rank);
+  
+ });
+console.log(deck);
 
 // B) Word Play
 // Create a form where users may enter a sentence.
@@ -54,6 +85,20 @@ var shiftLetters = function(string) {
 // Then, loop through this array to build a new array out of every word in the sentence that is 3 or more characters in length.
 // Finally, reverse the order of the new array, join it back together into a string, and display it to the user.
 
+$(document).ready(function() {
+  $('#form').submit(function(event){
+    var wordInSentence = $('#wordInSentence').val();
+    let array = wordInSentence.split(' ');
 
+    let array_new = array.map(function(word){
+      if(word.length > 3){return word;};
+
+    });
+    var resultArray = array_new.reverse();
+    const resultText = resultArray.join(' ');
+
+    alert(resultText);
+  });
+});
 
 
