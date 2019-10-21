@@ -8,18 +8,50 @@
 // function to return a string where every other word is in all caps.
 // Hint: look up Array.prototype.map on MDN and see what arguments the .map callback can take.
 // ex: swapCase('hello stranger , what do we have today? ') // => " HELLO stranger , WHAT do WE have TODAY ?"
-var swapCase = function(string) {
   // Codeeeee
-};
+  var swapCase = (string) => {
+    string = string.split(' ') 
+    string = string.map(function(index,item){
+      if ( item % 2 != 0) {  
+        index = index.toUpperCase()
+       }
+         return index 
+       
+    })
+    
+    console.log( string.join(" ") )
+  };
+  swapCase('hello stranger , what do we have today?')
 ​
 // B) Write a function shiftLetters that takes a string and uses .map to return an encoded string with each letter shifted down the
-// alphabet by one. Hint: Use Look up the JS functions String.fromCharCode() and String.charCodeAt() .
+// alphabet by one. Hint: Use Look up the JS functions String.fromCharCode() and String. .
 // see if you can use Ascii code to acomplish this
 // ex. shiftLetters('hello') // => 'ifmmp'
 // ex. (shiftLetters('abcxyz') // => "bcdyz{"
-var shiftLetters = function(string) {
   // code!
-};
+  var shiftLetters = (string)=> {
+    // code!
+        string = string.split('') 
+    string = string.map(function(item){
+     let encode= item.charCodeAt(0);
+     encode = encode + 1
+  
+     
+       encode =String.fromCharCode(encode)
+      //  console.log(encode)
+               return encode
+  
+              
+  
+    })
+  //  console.log(String.charCodeAt(0));
+   console.log(string.toString())
+    
+  
+  };
+  
+  shiftLetters('hello')
+  
 
 
 
@@ -47,6 +79,17 @@ var shiftLetters = function(string) {
 // - 2 of diamonds
 // - 3 of diamonds 
 
+suits = ["Heart", "Clubs", "Dimonds", "Spades"]
+numbers = ["Ace", "2", "3", "4", "5", "6", "7", "8", "9", "Jack", "Queen", "King"]
+
+suits.forEach(function(suit){
+  numbers.forEach(function(number){
+
+console.log( number + " of " + suit)
+
+  }
+  )
+});
 
 // B) Word Play
 // Create a form where users may enter a sentence.
