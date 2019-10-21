@@ -8,10 +8,13 @@
 // function to return a string where every other word is in all caps.
 // Hint: look up Array.prototype.map on MDN and see what arguments the .map callback can take.
 // ex: swapCase('hello stranger , what do we have today? ') // => " HELLO stranger , WHAT do WE have TODAY ?"
+
 var swapCase = function(string) {
   // Codeeeee
-};
-​
+  return string.split(' ').map((el, i) => i%2===0 ? capitalize(el) : el).join(' ');};
+swapCase("hello stranger , what do we have today? ");
+
+
 // B) Write a function shiftLetters that takes a string and uses .map to return an encoded string with each letter shifted down the
 // alphabet by one. Hint: Use Look up the JS functions String.fromCharCode() and String.charCodeAt() .
 // see if you can use Ascii code to acomplish this
@@ -19,7 +22,9 @@ var swapCase = function(string) {
 // ex. (shiftLetters('abcxyz') // => "bcdyz{"
 var shiftLetters = function(string) {
   // code!
+  return string.split('').map((el) => String.fromCharCode(el.charCodeAt()+1)).join('');
 };
+shiftLetters('hello');
 
 
 
@@ -47,6 +52,20 @@ var shiftLetters = function(string) {
 // - 2 of diamonds
 // - 3 of diamonds 
 
+
+var cards = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10, "Jack", "Queen", "King", "Ace"];
+var suits = ["Diamonds", "Hearts", "Clubs", "Spades"];
+var deck = [];
+
+suits.forEach(suit =>{
+  cards.forEach(card=>{
+    deck.push(card + " of " + suit);
+  });
+});
+deck.forEach(rank=>{  
+  console.log("Here's the deck");
+
+  });
 
 // B) Word Play
 // Create a form where users may enter a sentence.
