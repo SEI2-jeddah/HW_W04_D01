@@ -1,4 +1,4 @@
-​// ------ FOR ALL THE EXCERCISES ONLY USE ARROW FUNCTIONS  ----- //
+// ​// ------ FOR ALL THE EXCERCISES ONLY USE ARROW FUNCTIONS  ----- //
 ​
 
 
@@ -10,8 +10,11 @@
 // ex: swapCase('hello stranger , what do we have today? ') // => " HELLO stranger , WHAT do WE have TODAY ?"
 var swapCase = function(string) {
   // Codeeeee
-};
-​
+  capitalize = swapCase.map(string => string[0].capitalize()
+
+
+// };swapCase('hello stranger , what do we have today? ')
+​console.log(swapCase('hello stranger , what do we have today? '));
 // B) Write a function shiftLetters that takes a string and uses .map to return an encoded string with each letter shifted down the
 // alphabet by one. Hint: Use Look up the JS functions String.fromCharCode() and String.charCodeAt() .
 // see if you can use Ascii code to acomplish this
