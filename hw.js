@@ -8,18 +8,36 @@
 // function to return a string where every other word is in all caps.
 // Hint: look up Array.prototype.map on MDN and see what arguments the .map callback can take.
 // ex: swapCase('hello stranger , what do we have today? ') // => " HELLO stranger , WHAT do WE have TODAY ?"
-var swapCase = function(string) {
-  // Codeeeee
+var swapCase = (string) => {
+  string = string.split('') 
+  string = string.map(function(word,i){
+    if ( i % 2 != 0) {  
+      word = word.toUpperCase()
+     }
+       return word 
+     
+  })
+  console.log( string.join('') )
 };
+swapCase('hello stranger , what do we have today?')
+
+
+
+
+
 ​
 // B) Write a function shiftLetters that takes a string and uses .map to return an encoded string with each letter shifted down the
 // alphabet by one. Hint: Use Look up the JS functions String.fromCharCode() and String.charCodeAt() .
 // see if you can use Ascii code to acomplish this
 // ex. shiftLetters('hello') // => 'ifmmp'
 // ex. (shiftLetters('abcxyz') // => "bcdyz{"
-var shiftLetters = function(string) {
-  // code!
-};
+
+var shiftLetters = (string) => {
+ 
+  return string.split('').map((el) => String.fromCharCode(el.charCodeAt()+1)).join('');
+}
+
+shiftLetters('hello');
 
 
 
@@ -47,6 +65,15 @@ var shiftLetters = function(string) {
 // - 2 of diamonds
 // - 3 of diamonds 
 
+var suits = ["clubs","diamonds","hearts","spades"];
+var ranks = ["ace", "2", "3", "4", "5", "6", "7", "8", "9", "10", "Jack", "Queen", "King"];
+suits.forEach(suitse => {
+    ranks.forEach(rankse => {
+        console.log(rankse+" of "+suitse);
+        
+    });
+    
+});
 
 // B) Word Play
 // Create a form where users may enter a sentence.
@@ -56,4 +83,17 @@ var shiftLetters = function(string) {
 
 
 
-
+var wordPlay = (sentence) =>{
+  var newArr = sentence.split(" ")
+  var arr = [];
+  newArr.forEach(e => {
+      if(e.length >2){
+           arr.push(e)
+      }
+  });
+   return console.log((arr.reverse()).join(" "));
+   
+  }
+  var sentence = "Heyy my name is Nouf"
+  
+  wordPlay(sentence)
