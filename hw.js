@@ -1,7 +1,5 @@
 ​// ------ FOR ALL THE EXCERCISES ONLY USE ARROW FUNCTIONS  ----- //
 ​
-
-
 // PART 1:  USE MAP IN THE FOLLOWING EXCERCISES //
 
 // A) write a function called swapCase that takes a string of words and uses .map and your newly written capitalize()
@@ -9,9 +7,21 @@
 // Hint: look up Array.prototype.map on MDN and see what arguments the .map callback can take.
 // ex: swapCase('hello stranger , what do we have today? ') // => " HELLO stranger , WHAT do WE have TODAY ?"
 var swapCase = function(string) {
-  // Codeeeee
-};
-​
+    // Codeeeee
+  var capitalize=(words)=>words.toUpperCase();
+  var swapCase = (string) =>
+   {
+    string=string.split("  ");
+    string=string.map((words , w) =>
+    {
+      if(!w % 2 == 0){
+      return capitalize(words);
+      }
+    });
+    return string.join("  ");
+  };
+  console.log( swapCase (" HELLO stranger , WHAT do WE have TODAY ?"));
+
 // B) Write a function shiftLetters that takes a string and uses .map to return an encoded string with each letter shifted down the
 // alphabet by one. Hint: Use Look up the JS functions String.fromCharCode() and String.charCodeAt() .
 // see if you can use Ascii code to acomplish this
@@ -19,10 +29,16 @@ var swapCase = function(string) {
 // ex. (shiftLetters('abcxyz') // => "bcdyz{"
 var shiftLetters = function(string) {
   // code!
+  var word = string.split(" ")
+  var words = word.map(
+    letter => letter.charCodeAt() -1
+    )
+  var s = String.fromCharCode(...words);
+  console.log(s);
 };
+shiftLetters("Hii Yah ")
 
-
-
+}
 
 // PART 2: USE FOREACH IN THE FOLLOWING EXCERCISES
 
@@ -47,13 +63,20 @@ var shiftLetters = function(string) {
 // - 2 of diamonds
 // - 3 of diamonds 
 
+let ranks=['ace', '2', '3', '4', '5', '6', '7', '8', '9', '10', 'Jack', 'Queen', 'King'];
+let suits =['Clubs', 'Spades', 'Hearts', 'Diamonds'];
 
+suits.forEach(suits=>{
+  ranks.forEach(ranks=>{
+ console.log(ranks + ' of '+ suits);
+  } )
+}
+);
 // B) Word Play
 // Create a form where users may enter a sentence.
 // Turn that sentence into an array using the split method.
 // Then, loop through this array to build a new array out of every word in the sentence that is 3 or more characters in length.
 // Finally, reverse the order of the new array, join it back together into a string, and display it to the user.
-
 
 
 
