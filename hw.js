@@ -8,19 +8,57 @@
 // function to return a string where every other word is in all caps.
 // Hint: look up Array.prototype.map on MDN and see what arguments the .map callback can take.
 // ex: swapCase('hello stranger , what do we have today? ') // => " HELLO stranger , WHAT do WE have TODAY ?"
-var swapCase = function(string) {
-  // Codeeeee
+var swapCase = (string) =>
+
+{
+
+  var mapArr = string.split(' ')
+  console.log(mapArr);
+
+  var mapArr = mapArr.map((itemCode, i)=>{
+    if(i % 2 == 0) {
+      itemCode = itemCode.toUpperCase();
+    }
+     return itemCode
+  })
+  let answer = ''
+  for(elm of mapArr){
+    answer += ' '+ elm
+  }
+
+console.log(answer);
+
 };
-​
+swapCase('Hello stranger , what do we have today?')
+
+
 // B) Write a function shiftLetters that takes a string and uses .map to return an encoded string with each letter shifted down the
 // alphabet by one. Hint: Use Look up the JS functions String.fromCharCode() and String.charCodeAt() .
 // see if you can use Ascii code to acomplish this
 // ex. shiftLetters('hello') // => 'ifmmp'
 // ex. (shiftLetters('abcxyz') // => "bcdyz{"
-var shiftLetters = function(string) {
-  // code!
+
+
+var shiftLetters = string => {
+  string = string.split('')
+    var asciiCode =0
+    var letter = ''
+  string = string.map(item => {
+      asciiCode = item.charCodeAt()
+      asciiCode ++
+      letter = String.fromCharCode(asciiCode)
+      return letter
+
+  })
+  let shift  = ''
+  for(char of string){
+    shift  += char
+  }
+console.log(shift );
+
 };
 
+shiftLetters('juic')
 
 
 
@@ -46,6 +84,19 @@ var shiftLetters = function(string) {
 // - ace of diamonds
 // - 2 of diamonds
 // - 3 of diamonds 
+
+
+let cards = ['diamonds', 'hearts', 'spades', 'clubs']
+   let nums = ['Ace', '1', '2', '3', '4', '5', '6', '7', '8', '9', '10', 'Jack', 'Queen', 'King']
+
+   cards.forEach(card => {
+     nums.forEach(num =>{
+         console.log(num + ' of '+ card);
+
+     })  
+
+   });
+
 
 
 // B) Word Play
