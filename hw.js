@@ -1,5 +1,5 @@
-​// ------ FOR ALL THE EXCERCISES ONLY USE ARROW FUNCTIONS  ----- //
 ​
+<<<<<<< HEAD
 
 
 // PART 1:  USE MAP IN THE FOLLOWING EXCERCISES //
@@ -8,6 +8,8 @@
 // function to return a string where every other word is in all caps.
 // Hint: look up Array.prototype.map on MDN and see what arguments the .map callback can take.
 // ex: swapCase('hello stranger , what do we have today? ') // => " HELLO stranger , WHAT do WE have TODAY ?"
+=======
+>>>>>>> 217dced5555b51a4659734bf7eb6ef268108f463
 var print = (x) => {return console.log(x)}
 var swapCase = function(string) {
   var string = string.split('')
@@ -19,11 +21,15 @@ var swapCase = function(string) {
 swapCase('hello stranger , what do we have today?')
 
 ​
+<<<<<<< HEAD
 // B) Write a function shiftLetters that takes a string and uses .map to return an encoded string with each letter shifted down the
 // alphabet by one. Hint: Use Look up the JS functions String.fromCharCode() and String.charCodeAt() .
 // see if you can use Ascii code to acomplish this
 // ex. shiftLetters('hello') // => 'ifmmp'
 // ex. (shiftLetters('abcxyz') // => "bcdyz{"
+=======
+
+>>>>>>> 217dced5555b51a4659734bf7eb6ef268108f463
 var name = ['moe'];
 
 
@@ -91,6 +97,7 @@ function from_code(input){
 
 // PART 2: USE FOREACH IN THE FOLLOWING EXCERCISES
 
+<<<<<<< HEAD
 // A) Build a Deck
 // Use a forEach() loop within another forEach() loop to build an array representing a deck of cards. A deck consists of 52 cards - 13 ranks in each of 4 suits.
 // Then, display a list of every card in the deck. (Hint: Each element of the array should read something like "ace of spades" or "4 of hearts").
@@ -130,6 +137,23 @@ suits.forEach(function(index,key){
 // Then, loop through this array to build a new array out of every word in the sentence that is 3 or more characters in length.
 // Finally, reverse the order of the new array, join it back together into a string, and display it to the user.
 
+=======
+
+var suits = ["spades", "diamonds", "clubs", "hearts"];
+var values = ["A", "2", "3", "4", "5", "6", "7", "8", "9", "10", "J", "Q", "K"];
+
+suits.forEach(function(index,key){
+  console.log(`Start with ${index} -- ${key}`);
+  values.forEach(function(card,ind){
+    console.log(` ${index+1} of ${card}`)
+
+  })
+})
+
+
+
+
+>>>>>>> 217dced5555b51a4659734bf7eb6ef268108f463
 let input = 'hello moe world mac'
 var temp = []
 var wordPlay = (x)=>{
