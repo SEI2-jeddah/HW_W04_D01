@@ -8,25 +8,23 @@
 // function to return a string where every other word is in all caps.
 // Hint: look up Array.prototype.map on MDN and see what arguments the .map callback can take.
 // ex: swapCase('hello stranger , what do we have today? ') // => " HELLO stranger , WHAT do WE have TODAY ?"
-var swapCase = function(string) {
+var swapCase = (string) =>{
+  return string.split(" ").map(element) =>{
+    string.uppercase(element)};
+    swapCase = {'hello stranger , what do we have today? '};
   
-array = 'hello stranger , what do we have today? ';
-var string = []
-var swapCase = function(string) {
-  var upperCasedArray = $.map(array, 
-  String.toUpperCase);
 
-    return array.toUpperCase; 
-};
 
-};
-​
+
+//     return array.toUpperCase; 
+// };
+// ​
 // B) Write a function shiftLetters that takes a string and uses .map to return an encoded string with each letter shifted down the
 // alphabet by one. Hint: Use Look up the JS functions String.fromCharCode() and String.charCodeAt() .
 // see if you can use Ascii code to acomplish this
 // ex. shiftLetters('hello') // => 'ifmmp'
 // ex. (shiftLetters('abcxyz') // => "bcdyz{"
-var shiftLetters = function(string) {
+ var shiftLetters = function(string) {
   // code!
 };
 
@@ -56,13 +54,35 @@ var shiftLetters = function(string) {
 // - 2 of diamonds
 // - 3 of diamonds 
 
+var values = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13];
+var suits = ["clubs", "diamonds", "hearts", "spades"];
+var deck = ""
+
+
+valuse.forEach(element => {
+  suits.forEech(element =>{
+    deck.push(suits + valuse)
+
+
+  }
+} 
+console.log(suits + valuse)
+
+
+
+
+
+
+
+
+  
+
+
 
 // B) Word Play
 // Create a form where users may enter a sentence.
 // Turn that sentence into an array using the split method.
 // Then, loop through this array to build a new array out of every word in the sentence that is 3 or more characters in length.
 // Finally, reverse the order of the new array, join it back together into a string, and display it to the user.
-
-
 
 
