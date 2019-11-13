@@ -8,11 +8,21 @@
 // function to return a string where every other word is in all caps.
 // Hint: look up Array.prototype.map on MDN and see what arguments the .map callback can take.
 // ex: swapCase('hello stranger , what do we have today? ') // => " HELLO stranger , WHAT do WE have TODAY ?"
-var swapCase = (string) =>{
-  return string.split(" ").map(element) =>{
-    string.uppercase(element)};
-    swapCase = {'hello stranger , what do we have today? '};
-  
+var capitalize=(word)=>word.toUpperCase();
+
+var swapCase = (string)=> {
+  // Codeeeee
+  string=string.split(" ");
+  string=string.map((word,index)=>{
+    if(index%2==0){
+       return capitalize(word);
+    }else{
+        return word;
+    }
+  });
+  return string.join(" ");
+};
+console.log(swapCase('hello stranger, what do we have today? '));
 
 
 
@@ -27,6 +37,18 @@ var swapCase = (string) =>{
  var shiftLetters = function(string) {
   // code!
 };
+var shiftLetters=(string)=>{
+  // code!
+  originalString=string;
+  string=string.split("");
+  string=string.map((_letter,index)=>{
+       return String.fromCharCode(originalString.charCodeAt(index)+1);
+    });
+    return string.join("");
+};
+
+console.log(shiftLetters('hello'));
+console.log(shiftLetters('abcxyz'));
 
 
 
